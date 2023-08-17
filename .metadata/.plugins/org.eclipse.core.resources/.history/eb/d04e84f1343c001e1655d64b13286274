@@ -1,0 +1,55 @@
+package variable;
+
+public class LogicalOperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = 20;
+		int b = 20;
+		
+		if (a==b) {
+		System.out.println("True");
+		}
+		else {
+			System.out.println("False");
+		}
+
+		 boolean a1 = true;
+		 boolean b2 = false;
+		
+		  if (a1&&b2) {
+		 System.out.println("I am vimal patel");
+		      }
+		  
+		 else {
+			 System.out.println("I am vimal patel");
+		 }
+	  
+	   int a3 = 20;
+	   int b3 = 21;
+	   
+	   if (a3!=b3) {
+		   System.out.println("This is Right");
+	   }
+	
+	   else {
+		   System.out.println("This is Wrong");
+	   
+	      }
+	
+	    int A = 200;
+	    int B = 200;
+	   if (A>=B) {
+		   System.out.println("Today 11 August");
+	     }
+	   else {
+		   System.out.println("Today 12 August");
+	   }
+    	}
+    	
+	  }
+	   
+    
+	
+

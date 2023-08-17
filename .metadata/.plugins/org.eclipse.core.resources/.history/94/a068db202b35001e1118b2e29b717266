@@ -1,0 +1,25 @@
+package seleniumDependency;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MavenDependency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		WebDriver wb = new ChromeDriver();
+		wb.manage().window().maximize();
+        wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        wb.get("https://www.google.com");
+        
+        wb.findElement(By.cssSelector("[aria-label=\"Stay signed out\"]")).click();
+        wb.findElement(By.cssSelector("[class=\"SDkEP\"]")).sendKeys("google transalate");
+		
+	}
+
+}

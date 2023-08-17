@@ -1,0 +1,29 @@
+package signup;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class test1 {
+public static void main(String[] args) {
+	
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions o = new ChromeOptions();
+	o.addArguments("--remote-allow-origins=*");
+	WebDriver wb = new ChromeDriver(o);
+	wb.manage().window().maximize();
+
+	wb.get("http://54.179.140.163/");
+
+	WebElement drop = null;
+	Select s = new Select(drop);
+	    s.selectByIndex(1);
+
+	
+	
+   }
+}

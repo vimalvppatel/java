@@ -1,0 +1,21 @@
+package signup;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class test1 {
+public static void main(String[] args) {
+	
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions o = new ChromeOptions();
+	o.addArguments("--remote-allow-origins=*");
+	WebDriver wb = new ChromeDriver(o);
+	wb.get("https://54.179.140.163/");
+
+
+
+}
+}

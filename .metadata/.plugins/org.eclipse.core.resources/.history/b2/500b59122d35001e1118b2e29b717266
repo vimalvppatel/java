@@ -1,0 +1,38 @@
+package seleniumDependency;
+
+import java.awt.RenderingHints.Key;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MavenDependency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		WebDriver wb = new ChromeDriver();
+		wb.manage().window().maximize();
+        wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        wb.get("https://www.google.com");
+        try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+     //   wb.findElement(By.cssSelector("[jslog=\"71121; track:click;\"]")).click();
+        wb.findElement(By.cssSelector("[class=\"SDkEP\"]")).click();
+        
+        wb.findElement(By.cssSelector("[title=\"Search\"]")).sendKeys("google transalate");
+        
+        Actions c = new Actions(wb);
+        c.keyDown(Keys.ENTER).build().perform();
+		
+	}
+
+}

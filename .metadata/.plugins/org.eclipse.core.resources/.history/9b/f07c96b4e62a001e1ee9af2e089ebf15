@@ -1,0 +1,39 @@
+package login001;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Automation {
+
+	public static void main(String[] args) {
+
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions op = new ChromeOptions() ;
+		op.addArguments("--remote-allow-origins=*");
+		WebDriver wb = new ChromeDriver(op);
+		wb.manage().window().maximize();
+
+		wb.get("https://www.saucedemo.com/v1/");
+		wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		 WebElement email= wb.findElement(By.cssSelector("[type=\"email\"]"));
+		 email.sendKeys("https://www.saucedemo.com/");
+		 
+	         wb.manage().window().maximize();
+	
+		WebElement name = wb.findElement(By.cssSelector("[name=\"user-name\"]"));
+		 name.sendKeys("standard_user");
+		
+		 
+		WebElement pass = wb.findElement(By.cssSelector("[type=\"password\"]")); 
+		  pass.sendKeys("secret_sauce");
+	}
+
+}

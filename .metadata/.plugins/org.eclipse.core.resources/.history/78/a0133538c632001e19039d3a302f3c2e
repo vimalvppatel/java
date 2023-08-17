@@ -1,0 +1,91 @@
+package variable;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String name = "vimal patel";
+		System.out.println(name);
+		
+		String vimal = "Ravi Panwar";
+	    System.out.println(vimal);
+	    
+	    
+	    String VP = "Mayank mukati";
+	    System.out.println(VP);
+	    
+	    String Name = name.toUpperCase();
+	    System.out.println (Name);
+	     
+	    String Surname = name.toLowerCase();
+	    System.out.println(Surname);    
+	   
+	    int Vpatel = name.length();
+	     System.out.println(Vpatel);
+	
+	 
+	    String VIP = "      Patelvimal"; 
+	    String vpatel = VIP.trim();
+	    System.out.println(vpatel);
+	     
+	    String VName = "VVIPatel";
+	    String INT = VName.substring(1);		
+	    System.out.println(INT);
+	    
+	    
+	    String ABC = "Vimal Patel";
+	    String IND = ABC.replace('V', 'P');
+	    System.out.println(IND);
+	    
+	     
+	    String VPS = VIP.replaceFirst("Patel","Vimal");  
+	    String MCA = VPS.trim();
+	    String CBSC = MCA.toUpperCase();
+	    String CBS = CBSC.toLowerCase();
+	    System.out.println(CBSC);
+	    System.out.println(CBS);
+	    
+	    
+	    String VV = "Vimal patel";
+	    int wb = VV.length();
+	    System.out.println(wb);
+	    
+	    String PP = "MR.Spatel";
+	    String SP = PP.toUpperCase();
+	    System.out.println(SP);
+	    
+	   String NP = SP.toLowerCase();
+	   System.out.println(NP);
+	   
+	   String CH = VV.replace('p', 'P');
+	   System.out.println(CH);
+	  
+	    
+	   String VS = CH.toLowerCase();
+	   System.out.println(VS);
+	   
+	  int a = 100;
+	  int b = 200;
+	 
+	  System.out.println(a+b);
+	  
+	  System.out.println(VV.startsWith("Vi")); 
+	  
+	  System.out.println(VV.endsWith("eL"));
+	  
+	  System.out.println(VV.charAt(6));
+	  
+	  System.out.println(VV.replace("Vi", "VVIP"));
+	  
+	  System.out.println(PP.equalsIgnoreCase(PP));
+	  
+	  int a1 = 18;
+	   if (a1 > 25) {
+		   System.out.println("We are able to drive");
+	   }
+	  
+	   	}
+	
+	
+}

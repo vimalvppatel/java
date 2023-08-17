@@ -1,0 +1,27 @@
+package pro1;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test1 {
+	public static void main(String[] args) {
+
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions op = new ChromeOptions();
+		op.addArguments("--remote-allow-origins=*");
+		WebDriver wb = new ChromeDriver(op);
+		wb.get("https://demo.mobiscroll.com/select/multiple-select");
+
+		wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		WebElement drop = wb.findElement(By.className("[id=\"multiple-select-select\"]"));
+		   drop.click();
+	}
+}

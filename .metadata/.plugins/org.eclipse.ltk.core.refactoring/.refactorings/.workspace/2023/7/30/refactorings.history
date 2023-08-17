@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;variable&apos; to &apos;JavaLearningVeriables&apos;" description="Rename resource &apos;variable&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/variable" name="JavaLearningVeriables" stamp="1690554337122" updateReferences="true"/>
+</session>

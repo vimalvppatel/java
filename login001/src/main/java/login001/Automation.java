@@ -1,0 +1,112 @@
+package login001;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Automation {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions op = new ChromeOptions() ;
+		op.addArguments("--remote-allow-origins=*");
+		WebDriver wb = new ChromeDriver(op); 
+	    wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		wb.manage().window().maximize();
+	
+
+		wb.get("https://www.saucedemo.com/v1/");
+		wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		 
+	
+		wb.get("https://www.saucedemo.com/");
+		 
+	         wb.manage().window().maximize();
+	
+		WebElement name = wb.findElement(By.cssSelector("[name=\"user-name\"]"));
+		 name.sendKeys("standard_user");
+		
+		 
+		WebElement pass = wb.findElement(By.cssSelector("[type=\"password\"]")); 
+		  pass.sendKeys("secret_sauce");
+		  
+		wb.findElement(By.cssSelector("[name=\"login-button\"]")).click();
+		
+		
+		WebElement sub = wb.findElement(By.cssSelector("[data-test=\"add-to-cart-sauce-labs-backpack\"]"));
+		  sub.click();
+	
+	
+		  wb.findElement(By.cssSelector("[class=\"shopping_cart_link\"]")).click();
+		  
+		  wb.findElement(By.cssSelector("[data-test=\"remove-sauce-labs-backpack\"]")).click();
+		  
+		  Thread.sleep(1000);
+		  
+		  wb.navigate().back();
+		  
+		  
+		  WebElement sub2 = wb.findElement(By.cssSelector("[name=\"add-to-cart-sauce-labs-bolt-t-shirt\"]"));
+		  
+		  sub2.click();
+		  
+		  wb.findElement(By.cssSelector("[class=\"shopping_cart_link\"]")).click();
+		  String sauce;
+		  
+		wb.findElement(By.cssSelector("[id=\"remove-sauce-labs-bolt-t-shirt\"]")).click();
+		
+		   wb.navigate().back();
+		 
+		WebElement sel = wb.findElement(By.cssSelector("[id=\"item_4_title_link\"]"));
+		 sel.click();
+		 
+		 
+	    WebElement v = wb.findElement(By.cssSelector("[data-test=\"add-to-cart-sauce-labs-backpack\"]"));
+	       v.click();
+	  
+	       
+	     wb.findElement(By.cssSelector("[class=\"shopping_cart_link\"]")).click();
+	     
+	     
+	  wb.findElement(By.cssSelector("[class=\"btn btn_action btn_medium checkout_button\"]")).click();
+	  
+	  
+	     WebElement p = wb.findElement(By.cssSelector("[placeholder=\"First Name\"]"));
+	        p.sendKeys("Vimal");
+	        
+	     WebElement last = wb.findElement(By.cssSelector("[placeholder=\"Last Name\"]"));
+	        last.sendKeys("patel");
+	        
+	        
+		     WebElement zip = wb.findElement(By.cssSelector("[placeholder=\"Zip/Postal Code\"]"));
+		        zip.sendKeys("123456");
+		        
+	      wb.findElement(By.cssSelector("[type=\"submit\"]")).click();
+	     
+	     wb.findElement(By.id("finish")).click();
+	     
+	    wb.findElement(By.id("back-to-products")).click();
+	    	    
+	   wb.findElement(By.id("react-burger-menu-btn")).click();   
+	  
+	  wb.findElement(By.id("logout_sidebar_link")).click();
+	 
+
+	  
+			  
+	  
+	  
+	  
+			  
+     }
+	
+
+}
+

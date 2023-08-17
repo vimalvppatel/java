@@ -1,0 +1,45 @@
+package signup;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.v112.page.model.ScreencastFrame;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class test1 {
+public static void main(String[] args) {
+	
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions o = new ChromeOptions();
+	o.addArguments("--remote-allow-origins=*");
+	WebDriver wb = new ChromeDriver(o);
+	wb.manage().window().maximize();
+
+	wb.get("http://54.179.140.163/");
+	wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
+ WebElement Sel = wb.findElement(By.cssSelector("[class=\"form-control me-auto ms-auto  w-50\"]"));
+     Select s = new Select(Sel);
+       s.selectByVisibleText("Risk Coordinator");
+   
+    WebElement Username = wb.findElement(By.xpath("[name=\"email\"]"));
+       Username.sendKeys("ajay123@gmail.com");
+     
+    WebElement pass = wb.findElement(By.xpath("[type=\"password\"]"));
+       pass.sendKeys("Ajay@007");
+     
+    WebElement Login = wb.findElement(By.xpath("[class=\"btn-dark btn mt-3\"]"));
+         Login.click();
+       
+
+
+	
+	
+   }
+}

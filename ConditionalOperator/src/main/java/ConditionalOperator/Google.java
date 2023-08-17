@@ -13,7 +13,7 @@ public class Google {
 		WebDriver wb = new ChromeDriver();
       wb.manage().window().maximize();
       wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		wb.get("https://www.google.com/");
+	  wb.get("https://www.google.com/");
 		
 	}
 

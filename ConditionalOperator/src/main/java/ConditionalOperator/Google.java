@@ -11,9 +11,9 @@ public class Google {
 		// TODO Auto-generated method stub
 		
 		WebDriver wb = new ChromeDriver();
-      wb.manage().window().maximize();
-      wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	  wb.get("https://www.google.com/");
+      wb.manage().window().maximize(); // windows maximize line
+      wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // thread line
+	  wb.get("https://www.google.com/"); // Navigate into the chrome browser
 		
 	}
 

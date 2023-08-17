@@ -13,11 +13,11 @@ public class Conditioanal {
 		// if ( a && b );	
 		// if (a =! b);
 			
-			System.out.println("I am vimal patel");
+			System.out.println("The VIMAL PATEL");
 			}
 		
 		else {
-			System.out.println("I am Mayank Baghela");
+			System.out.println("the vimal pate");
 		}
 		
 	}

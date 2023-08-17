@@ -17,7 +17,7 @@ public class Conditioanal {
 			}
 		
 		else {
-			System.out.println("I am Gourank Zarbade Indore");
+			System.out.println("I am Mayank Baghela");
 		}
 		
 	}

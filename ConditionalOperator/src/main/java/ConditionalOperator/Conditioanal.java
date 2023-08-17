@@ -18,7 +18,7 @@ public class Conditioanal {
 		
 		else {
 			System.out.println("The Vimal Patel");
-		
+			
 		}
 		
 	}

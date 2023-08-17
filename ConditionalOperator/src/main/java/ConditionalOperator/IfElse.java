@@ -5,8 +5,8 @@ public class IfElse {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 int a = 10;
-		 int b = 20;
+		 int a = 500;
+		 int b = 100;
 		 
 		 if (a>b) {
 			 

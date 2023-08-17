@@ -1,5 +1,7 @@
 package ConditionalOperator;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,8 +13,9 @@ public class Gitupclass {
 		WebDriver wb = new ChromeDriver();
 		
          wb.manage().window().maximize();
-         //wb.manage().timeouts().implicitlyWait(DurationOfSecond(10));
+        wb.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        wb.get("https://www.google.com/");    
+       
 	}
 
 }

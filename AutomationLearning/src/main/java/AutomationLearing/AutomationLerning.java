@@ -25,11 +25,13 @@ public class AutomationLerning {
 		
 		   int a11 = 100;
 		   int b11 = 200;
-		   boolean c11 = a11 <=b11;
+		   boolean c11 = a11 <= b11;
 		   System.out.println(c11);
 		
            int a111 = 7 ;
            int b111 = ++a111 * 5 ;
+           int VP = a111++ * 2 ;
+           System.out.println(VP);
            System.out.println(b111);
         
         String a1111 = "Vimal Patel";
@@ -111,7 +113,7 @@ public class AutomationLerning {
             }
             
             
-            String[] cars = {"volvo","Maruti","OD", "Hundai", "RangRover", "Discovery"};
+            String[] cars = {"volvo","Maruti","OD", "Hundai", "RngRover", "Discovery"};
             String[] names = {"Vimal", "Patel","From", "Sanawad"};
             System.out.println(names[0] + " " + cars[5]);
             
@@ -122,13 +124,36 @@ public class AutomationLerning {
          int[][] myNum ={{1,2,3,4},{5,6,7,8,9,10}};
          System.out.println(myNum[1][3]);
        	 System.out.println(myNum.length);
-       	 int r = 0;
        	 for (int r1= 0;r1<myNum.length;r1++) {
-       	 for (int j =0; j<myNum.length; j++) {
-       	 int j1 = 0;
+      	 for (int j =0; j<myNum.length; j++) {
+        int j1 = 0;
 		System.out.println(myNum[r1][j1]);
 	}
-}
+      }
        	 
-       	 
-	}}
+       	 int randomNum = (int)(Math.random()*101);   // Random number generator method 
+          System.out.print(randomNum);
+       	
+          
+
+
+        String[] names1 = {"vimal", "Ankit", "ravi", "Pushpendra", "Mayank", "Patel"};
+        for(int V = 0; V < names1.length; V ++){
+        System.out.println(names1[V]);
+       }
+         System.out.println(names1.length); // lengh
+         System.out.println(names1[0]);  // Indexing 
+         System.out.println(names1[0] + " "+ names1[5]);
+         
+         
+         
+         
+   }
+ 
+    }
+          
+
+
+        
+
+
